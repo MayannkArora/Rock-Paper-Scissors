@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         // function to randomly return rock, paper, or scissors
+         function computerPlay(){
+             var arr = ['Rock', 'Paper', 'Scissor'];
+             let result = arr[Math.floor(Math.random() * arr.length)];
+             return result;
+         }
+
+         computerPlay()
+         // getting user inputs
+         let playerSelection = prompt('Enter rock, paper, or scissors', );
+         let computerSelection = computerPlay();
+
+         // to check if computerSelection works
+         alert(computerSelection);
+
+         // function to get alerts
+         function playRound (playerSelection, computerSelection) {
+             if (playerSelection == 'rock' && computerSelection == 'Paper') {
+                 alert("You lose as paper beats rock");
+             } else if (playerSelection == 'rock' && computerSelection == 'Scissor'){
+                 alert("You win as rock beats scissor");
+             } else if (playerSelection == 'paper' && computerSelection == 'Scissor'){
+                 alert("You lose as scissor beats paper");
+             } else if (playerSelection == 'paper' && computerSelection == 'Rock'){
+                alert("You win as paper beats rock");
+             } else if (playerSelection == 'scissors' && computerSelection =='Rock'){
+                alert("You loise as rock beats scissor");
+             } else if (playerSelection == 'scissors' && computerSelection == 'Paper'){
+                alert("You win as scissor beats paper");
+             } else {
+                 alert ("input again");
+             }    
+             }
+             
+        // calling function
+             playRound()
+
+        // function not working. Only returing 'input again'
+    </script>  
+</body>
+</html>
