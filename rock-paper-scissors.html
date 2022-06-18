@@ -8,44 +8,86 @@
 </head>
 <body>
     <script>
-         // function to randomly return rock, paper, or scissors
-         function computerPlay(){
-             var arr = ['Rock', 'Paper', 'Scissor'];
-             let result = arr[Math.floor(Math.random() * arr.length)];
-             return result;
-         }
+        
+        // defining the initial user and cpu wins
+        let userWins = 0;
+        let cpuWins = 0;
 
-         computerPlay()
-         // getting user inputs
-         let playerSelection = prompt('Enter rock, paper, or scissors', );
-         let computerSelection = computerPlay();
+        // defining the function to see who won
+        function gameresult(){
+            // defining the input values
+            let userInput = prompt('Please enter rock, paper, or scissor', );
 
-         // to check if computerSelection works
-         alert(computerSelection);
+            let mainInput = userInput.toLowerCase();
 
-         // function to get alerts
-         function playRound (playerSelection, computerSelection) {
-             if (playerSelection == 'rock' && computerSelection == 'Paper') {
-                 alert("You lose as paper beats rock");
-             } else if (playerSelection == 'rock' && computerSelection == 'Scissor'){
-                 alert("You win as rock beats scissor");
-             } else if (playerSelection == 'paper' && computerSelection == 'Scissor'){
-                 alert("You lose as scissor beats paper");
-             } else if (playerSelection == 'paper' && computerSelection == 'Rock'){
-                alert("You win as paper beats rock");
-             } else if (playerSelection == 'scissors' && computerSelection =='Rock'){
-                alert("You loise as rock beats scissor");
-             } else if (playerSelection == 'scissors' && computerSelection == 'Paper'){
-                alert("You win as scissor beats paper");
-             } else {
-                 alert ("input again");
-             }    
-             }
-             
-        // calling function
-             playRound()
+            alert(mainInput);
 
-        // function not working. Only returing 'input again'
-    </script>  
+           function cpuInputInit () {
+            var arr = ['Rock', 'Paper', 'Scissor'];
+            let result = arr[Math.floor(Math.random() * arr.length)];
+            return result;
+           }
+
+           cpuInputInit()
+
+           let cpuInput = cpuInputInit();
+
+
+           alert(cpuInput); // to confirm the CPU input
+
+           // defining count of CPU and User wins
+
+        //    let userWins = 0;
+        //    let cpuWins = 0;
+
+           // writing the if statement
+
+           if(mainInput == "rock" && cpuInput == "Paper"){
+           console.log("User chose rock and CPU chose Paper. Thus, CPU won");
+            cpuWins = cpuWins + 1;
+           } else if(mainInput == "rock" && cpuInput == "Scissor"){
+            console.log("User chose rock and CPU chose Scissor. Thus, User won");
+            userWins = userWins + 1;
+           } else if (mainInput == "paper" && cpuInput == "Rock"){
+            console.log("User chose paper and CPU chose Rock. Thus, User won");
+            userWins = userWins + 1;
+           } else if (mainInput == "paper" && cpuInput == "Scissor"){
+            console.log("User chose paper and CPU chose Scissor. Thus, CPU won");
+            cpuWins = cpuWins + 1;
+           } else if (mainInput == "scissor" && cpuInput == "Paper"){
+           console.log("User chose scissor and CPU chose Paper. Thus, User won");
+           userWins = userWins + 1;
+           } else if (mainInput == "scissor" && cpuInput == "Rock"){
+           console.log("User chose scissor and CPU chose Rock. Thus, CPU won");
+           cpuWins = cpuWins + 1;
+           }  else {
+            console.log("It's a tie.")
+           }
+           
+           return(cpuWins);
+           return(userWins);
+
+        }
+
+        // gameresult()
+
+        function game(){
+            for (let i = 0; i < 5; i++) {
+                gameresult()
+            }
+            if (cpuWins>userWins){
+                alert("CPU Won");
+                } else if (userWins>cpuWins){
+                alert("You win");
+                } else {
+                alert("It's a tie");
+                }
+            }
+
+        
+
+        game()
+
+    </script>
 </body>
 </html>
