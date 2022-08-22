@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    background-color: #F4F6F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'M PLUS 1p', sans-serif;
+    gap: 10rem;
+    color:#E71723;
+}
+
+#rock, #paper, #scissors, #reset{
+    border-style: solid;
+    border-radius: 50%;
+    min-width: 5rem;
+    min-height: 5rem;
+    border-color: black;
+    background-color: white;
+    font-weight: 700;
+}
+
+.buttons{
+    min-width: 50%;
+    display: flex;
+    gap: 12rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+button:hover{
+    scale: 1.1;
+    background-color: black; 
+    margin-bottom: 0.1%;
+}
+
+#rock:hover, #paper:hover, #scissors:hover, #reset:hover{
+    background-color: #E7F507;
+    border-style: double;
+    border-width: 0.3rem;
+    border-color:  #0F0F0B;
+}
+
+.plScore, .aiScore{
+    display: flex;
+    margin-right: 15%;
+    
+    
+   
+    
+}
+
+#pScore, #aiScore{
+    display: inline-block;
+    border-style: dotted;
+    background-color: white;
+    min-width: 2rem;
+    min-height: 2rem;
+    text-align: center;
+    font-family: Alumni Sans Pinstripe;
+    color:#0F0F0B;
+  
+}
+
+.keydown{
+    background-color: #F0B27A;
+}
+
+.all{
+    border-style: groove;
+    border-color: #E71723;
+    padding: 1%;
+    margin-top: 8%;
+    background-color: rgba(241, 196, 15, 0.3);
+}
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading h1{
+    text-align: center;
+}
+
+#result{
+    margin-left: 9rem;
+    background-color: white;
+    min-height: 2rem;
+    min-width: 6rem;
+    text-align: center;
+    font-size: 1rem;
+    
+}
+
+.fResult{
+    display: flex;
+    justify-content: space-between;
+}
